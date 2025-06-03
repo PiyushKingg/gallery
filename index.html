@@ -4,173 +4,88 @@
   <meta charset="UTF-8">
   <title>Ken server's gay people</title>
   <style>
-    @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@600&display=swap');
-
-    /* Reset */
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-
     body {
-      background-color: #0f0f0f;
-      color: #fff;
+      margin: 0;
+      background-color: #0a0a0a;
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
       scroll-behavior: smooth;
-      line-height: 1.4;
     }
 
-    /* Header */
-    h1 {
+    header {
       text-align: center;
-      margin: 40px 0;
-      font-size: 3rem;
-      font-family: 'Orbitron', sans-serif;
-      color: #fff;
-      text-shadow:
-        0 0 8px #fff,
-        0 0 16px #fff,
-        0 0 24px #0ff,
-        0 0 32px #0ff;
+      padding: 30px 10px 20px;
+      font-size: 2.5em;
+      color: white;
+      text-shadow: 0 0 10px white, 0 0 20px white;
+      font-weight: bold;
     }
 
-    /* Gallery container */
     .gallery {
       display: flex;
       flex-direction: column;
       align-items: center;
-      gap: 60px;
-      padding-bottom: 60px;
-      width: 100%;
-      max-width: 600px;
-      margin: 0 auto;
+      gap: 30px;
+      padding: 20px;
     }
 
-    /* Number label */
-    .number-label {
-      align-self: flex-start;
-      margin-left: 20px;
-      font-size: 1.5rem;
-      font-weight: bold;
-      color: #0ff;
-    }
-
-    /* Image card */
-    .image-card {
-      width: 90%;
-      max-width: 500px;
-      border: 3px solid #0ff;
+    .image-block {
+      position: relative;
+      border: 3px solid cyan;
       border-radius: 12px;
-      box-shadow: 0 0 20px rgba(0, 255, 255, 0.5);
-      overflow: hidden;
-      transition: transform 0.3s ease;
+      padding: 10px;
+      box-shadow: 0 0 15px cyan;
+      background-color: #111;
+      width: 90%;
+      max-width: 400px;
     }
 
-    .image-card:hover {
-      transform: scale(1.04);
-    }
-
-    /* Image itself */
-    .image-card img {
-      display: block;
+    .image-block img {
       width: 100%;
-      height: auto;
+      border-radius: 8px;
+      display: block;
     }
 
-    /* Footer */
+    .image-number {
+      position: absolute;
+      top: -15px;
+      left: -15px;
+      background: cyan;
+      color: black;
+      font-weight: bold;
+      padding: 5px 10px;
+      border-radius: 50%;
+      font-size: 1.2em;
+      box-shadow: 0 0 10px cyan;
+    }
+
     footer {
       text-align: center;
-      padding: 40px 20px;
-      color: #888;
-      font-size: 0.9rem;
+      color: #aaa;
+      margin: 50px 20px 30px;
+      font-size: 0.9em;
     }
   </style>
 </head>
 <body>
-
-  <h1>Ken server's gay people</h1>
-
+  <header>Ken server's gay people</header>
   <div class="gallery">
-    <div class="number-label">1.</div>
-    <div class="image-card">
-      <img src="https://ibb.co/0y5nWVgs" alt="Image 1">
-    </div>
-
-    <div class="number-label">2.</div>
-    <div class="image-card">
-      <img src="https://ibb.co/4ZqBPhxY" alt="Image 2">
-    </div>
-
-    <div class="number-label">3.</div>
-    <div class="image-card">
-      <img src="https://ibb.co/GvXTCZm5" alt="Image 3">
-    </div>
-
-    <div class="number-label">4.</div>
-    <div class="image-card">
-      <img src="https://ibb.co/Dg5z0hvJ" alt="Image 4">
-    </div>
-
-    <div class="number-label">5.</div>
-    <div class="image-card">
-      <img src="https://ibb.co/pv66N16C" alt="Image 5">
-    </div>
-
-    <div class="number-label">6.</div>
-    <div class="image-card">
-      <img src="https://ibb.co/QFLy6bDf" alt="Image 6">
-    </div>
-
-    <div class="number-label">7.</div>
-    <div class="image-card">
-      <img src="https://ibb.co/C34zs7Fv" alt="Image 7">
-    </div>
-
-    <div class="number-label">8.</div>
-    <div class="image-card">
-      <img src="https://ibb.co/Jw9gtyk5" alt="Image 8">
-    </div>
-
-    <div class="number-label">9.</div>
-    <div class="image-card">
-      <img src="https://ibb.co/yFJdCPhd" alt="Image 9">
-    </div>
-
-    <div class="number-label">10.</div>
-    <div class="image-card">
-      <img src="https://ibb.co/0pq5Mbd5" alt="Image 10">
-    </div>
-
-    <div class="number-label">11.</div>
-    <div class="image-card">
-      <img src="https://ibb.co/7N6H2g5K" alt="Image 11">
-    </div>
-
-    <div class="number-label">12.</div>
-    <div class="image-card">
-      <img src="https://ibb.co/YBQnY02z" alt="Image 12">
-    </div>
-
-    <div class="number-label">13.</div>
-    <div class="image-card">
-      <img src="https://ibb.co/fzWBgvXh" alt="Image 13">
-    </div>
-
-    <div class="number-label">14.</div>
-    <div class="image-card">
-      <img src="https://ibb.co/4RGfVtbG" alt="Image 14">
-    </div>
-
-    <div class="number-label">15.</div>
-    <div class="image-card">
-      <img src="https://ibb.co/JjLCY8L5" alt="Image 15">
-    </div>
+    <div class="image-block"><div class="image-number">1</div><img src="https://i.ibb.co/fdJXKGhD/Picsart-25-02-10-20-26-03-610.png" alt=""></div>
+    <div class="image-block"><div class="image-number">2</div><img src="https://i.ibb.co/mCjQ6f7X/Screenshot-2025-01-17-14-29-32-182-com-discord-edit.jpg" alt=""></div>
+    <div class="image-block"><div class="image-number">3</div><img src="https://i.ibb.co/99JtyxPr/image.png" alt=""></div>
+    <div class="image-block"><div class="image-number">4</div><img src="https://i.ibb.co/2YgWGxC9/Screenshot-20250208-235917-Discord.jpg" alt=""></div>
+    <div class="image-block"><div class="image-number">5</div><img src="https://i.ibb.co/rGKKqQKn/Screenshot-20250208-212211-Discord.jpg" alt=""></div>
+    <div class="image-block"><div class="image-number">6</div><img src="https://i.ibb.co/BVb0gznt/Screenshot-20250208-205739-Discord.jpg" alt=""></div>
+    <div class="image-block"><div class="image-number">7</div><img src="https://i.ibb.co/ycKXByJ5/Screenshot-20250208-161835-Discord.jpg" alt=""></div>
+    <div class="image-block"><div class="image-number">8</div><img src="https://i.ibb.co/5gPw4ncB/Screenshot-20250208-142837-Discord.jpg" alt=""></div>
+    <div class="image-block"><div class="image-number">9</div><img src="https://i.ibb.co/YBGPSQDP/IMG-2891-png.jpg" alt=""></div>
+    <div class="image-block"><div class="image-number">10</div><img src="https://i.ibb.co/7xvhWm6h/Screenshot-20250208-135558-Discord.jpg" alt=""></div>
+    <div class="image-block"><div class="image-number">11</div><img src="https://i.ibb.co/bR8xzHZX/Screenshot-20250208-133858-Discord.jpg" alt=""></div>
+    <div class="image-block"><div class="image-number">12</div><img src="https://i.ibb.co/k2BbkmKR/Screenshot-20250208-131317-Discord.jpg" alt=""></div>
+    <div class="image-block"><div class="image-number">13</div><img src="https://i.ibb.co/21rm9NFD/Screenshot-20250208-130720-Discord.jpg" alt=""></div>
+    <div class="image-block"><div class="image-number">14</div><img src="https://i.ibb.co/ZzPJMXQP/playrix.png" alt=""></div>
+    <div class="image-block"><div class="image-number">15</div><img src="https://i.ibb.co/RTn7Xtnz/image-19.jpg" alt=""></div>
   </div>
 
-  <footer>
-    This is just for fun. Don’t take anything seriously 💀
-  </footer>
-
+  <footer>This is just for fun. Don't take it seriously 😎</footer>
 </body>
 </html>
