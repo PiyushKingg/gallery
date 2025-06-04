@@ -4,39 +4,71 @@
   <meta charset="UTF-8">
   <title>Ken server's gay people</title>
   <style>
-    body {
+    /* Import neon font */
+    @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@600&display=swap');
+
+    /* Reset and base styles */
+    * {
       margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
       background-color: #0a0a0a;
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
       scroll-behavior: smooth;
+      color: #fff;
+      line-height: 1.4;
     }
 
+    /* Header */
     header {
       text-align: center;
       padding: 30px 10px 20px;
       font-size: 2.5em;
+      font-family: 'Orbitron', sans-serif;
       color: white;
-      text-shadow: 0 0 10px white, 0 0 20px white;
+      text-shadow:
+        0 0 10px white,
+        0 0 20px white;
       font-weight: bold;
     }
 
+    /* Gallery container */
     .gallery {
       display: flex;
       flex-direction: column;
       align-items: center;
       gap: 30px;
       padding: 20px;
+      width: 100%;
+      max-width: 600px;
+      margin: 0 auto;
     }
 
+    /* Each image block */
     .image-block {
       position: relative;
+      width: 90%;
+      max-width: 400px;
       border: 3px solid cyan;
       border-radius: 12px;
       padding: 10px;
-      box-shadow: 0 0 15px cyan;
       background-color: #111;
-      width: 90%;
-      max-width: 400px;
+      box-shadow: 0 0 15px cyan;
+      overflow: hidden;
+
+      /* Initial state for scroll animation */
+      opacity: 0;
+      transform: translateY(50px);
+      transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+    }
+
+    /* When visible in viewport */
+    .image-block.visible {
+      opacity: 1;
+      transform: translateY(0);
     }
 
     .image-block img {
@@ -45,6 +77,7 @@
       display: block;
     }
 
+    /* Number badge */
     .image-number {
       position: absolute;
       top: -15px;
@@ -58,6 +91,7 @@
       box-shadow: 0 0 10px cyan;
     }
 
+    /* Footer */
     footer {
       text-align: center;
       color: #aaa;
@@ -68,6 +102,7 @@
 </head>
 <body>
   <header>Ken server's gay people</header>
+
   <div class="gallery">
     <div class="image-block"><div class="image-number">1</div><img src="https://i.ibb.co/fdJXKGhD/Picsart-25-02-10-20-26-03-610.png" alt=""></div>
     <div class="image-block"><div class="image-number">2</div><img src="https://i.ibb.co/mCjQ6f7X/Screenshot-2025-01-17-14-29-32-182-com-discord-edit.jpg" alt=""></div>
@@ -84,8 +119,36 @@
     <div class="image-block"><div class="image-number">13</div><img src="https://i.ibb.co/21rm9NFD/Screenshot-20250208-130720-Discord.jpg" alt=""></div>
     <div class="image-block"><div class="image-number">14</div><img src="https://i.ibb.co/ZzPJMXQP/playrix.png" alt=""></div>
     <div class="image-block"><div class="image-number">15</div><img src="https://i.ibb.co/RTn7Xtnz/image-19.jpg" alt=""></div>
+    <div class="image-block"><div class="image-number">16</div><img src="https://i.ibb.co/gpZSTBk/IMG-2734.jpg" alt=""></div>
+    <div class="image-block"><div class="image-number">17</div><img src="https://i.ibb.co/0pC96thw/image-1.png" alt=""></div>
+    <div class="image-block"><div class="image-number">18</div><img src="https://i.ibb.co/4RM48XLx/Screenshot-2025-06-03-15-18-02-28-572064f74bd5f9fa804b05334aa4f912.jpg" alt=""></div>
   </div>
 
-  <footer>This is just for fun. Don't take it seriously 😎</footer>
+  <footer>This is just for fun. Don’t take it seriously 💀</footer>
+
+  <script>
+    // Intersection Observer for scroll animation
+    document.addEventListener('DOMContentLoaded', function() {
+      const blocks = document.querySelectorAll('.image-block');
+      const observerOptions = {
+        root: null,
+        rootMargin: '0px',
+        threshold: 0.15
+      };
+
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('visible');
+            observer.unobserve(entry.target);
+          }
+        });
+      }, observerOptions);
+
+      blocks.forEach(block => {
+        observer.observe(block);
+      });
+    });
+  </script>
 </body>
 </html>
