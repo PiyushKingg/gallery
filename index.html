@@ -4,21 +4,20 @@
   <meta charset="UTF-8">
   <title>Ken server's gay people</title>
   <style>
-    /* Import neon font */
+    /* Import a neon-style font */
     @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@600&display=swap');
 
-    /* Reset and base styles */
+    /* Reset & base */
     * {
       margin: 0;
       padding: 0;
       box-sizing: border-box;
     }
-
     body {
       background-color: #0a0a0a;
+      color: #fff;
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
       scroll-behavior: smooth;
-      color: #fff;
       line-height: 1.4;
     }
 
@@ -57,18 +56,7 @@
       padding: 10px;
       background-color: #111;
       box-shadow: 0 0 15px cyan;
-      overflow: hidden;
-
-      /* Initial state for scroll animation */
-      opacity: 0;
-      transform: translateY(50px);
-      transition: opacity 0.6s ease-out, transform 0.6s ease-out;
-    }
-
-    /* When visible in viewport */
-    .image-block.visible {
-      opacity: 1;
-      transform: translateY(0);
+      overflow: visible; /* allow the badge to sit outside without being clipped */
     }
 
     .image-block img {
@@ -80,8 +68,8 @@
     /* Number badge */
     .image-number {
       position: absolute;
-      top: -15px;
-      left: -15px;
+      top: -12px;
+      left: -12px;
       background: cyan;
       color: black;
       font-weight: bold;
@@ -101,54 +89,84 @@
   </style>
 </head>
 <body>
+
   <header>Ken server's gay people</header>
 
   <div class="gallery">
-    <div class="image-block"><div class="image-number">1</div><img src="https://i.ibb.co/fdJXKGhD/Picsart-25-02-10-20-26-03-610.png" alt=""></div>
-    <div class="image-block"><div class="image-number">2</div><img src="https://i.ibb.co/mCjQ6f7X/Screenshot-2025-01-17-14-29-32-182-com-discord-edit.jpg" alt=""></div>
-    <div class="image-block"><div class="image-number">3</div><img src="https://i.ibb.co/99JtyxPr/image.png" alt=""></div>
-    <div class="image-block"><div class="image-number">4</div><img src="https://i.ibb.co/2YgWGxC9/Screenshot-20250208-235917-Discord.jpg" alt=""></div>
-    <div class="image-block"><div class="image-number">5</div><img src="https://i.ibb.co/rGKKqQKn/Screenshot-20250208-212211-Discord.jpg" alt=""></div>
-    <div class="image-block"><div class="image-number">6</div><img src="https://i.ibb.co/BVb0gznt/Screenshot-20250208-205739-Discord.jpg" alt=""></div>
-    <div class="image-block"><div class="image-number">7</div><img src="https://i.ibb.co/ycKXByJ5/Screenshot-20250208-161835-Discord.jpg" alt=""></div>
-    <div class="image-block"><div class="image-number">8</div><img src="https://i.ibb.co/5gPw4ncB/Screenshot-20250208-142837-Discord.jpg" alt=""></div>
-    <div class="image-block"><div class="image-number">9</div><img src="https://i.ibb.co/YBGPSQDP/IMG-2891-png.jpg" alt=""></div>
-    <div class="image-block"><div class="image-number">10</div><img src="https://i.ibb.co/7xvhWm6h/Screenshot-20250208-135558-Discord.jpg" alt=""></div>
-    <div class="image-block"><div class="image-number">11</div><img src="https://i.ibb.co/bR8xzHZX/Screenshot-20250208-133858-Discord.jpg" alt=""></div>
-    <div class="image-block"><div class="image-number">12</div><img src="https://i.ibb.co/k2BbkmKR/Screenshot-20250208-131317-Discord.jpg" alt=""></div>
-    <div class="image-block"><div class="image-number">13</div><img src="https://i.ibb.co/21rm9NFD/Screenshot-20250208-130720-Discord.jpg" alt=""></div>
-    <div class="image-block"><div class="image-number">14</div><img src="https://i.ibb.co/ZzPJMXQP/playrix.png" alt=""></div>
-    <div class="image-block"><div class="image-number">15</div><img src="https://i.ibb.co/RTn7Xtnz/image-19.jpg" alt=""></div>
-    <div class="image-block"><div class="image-number">16</div><img src="https://i.ibb.co/gpZSTBk/IMG-2734.jpg" alt=""></div>
-    <div class="image-block"><div class="image-number">17</div><img src="https://i.ibb.co/0pC96thw/image-1.png" alt=""></div>
-    <div class="image-block"><div class="image-number">18</div><img src="https://i.ibb.co/4RM48XLx/Screenshot-2025-06-03-15-18-02-28-572064f74bd5f9fa804b05334aa4f912.jpg" alt=""></div>
+    <div class="image-block">
+      <div class="image-number">1</div>
+      <img src="https://i.ibb.co/fdJXKGhD/Picsart-25-02-10-20-26-03-610.png" alt="">
+    </div>
+    <div class="image-block">
+      <div class="image-number">2</div>
+      <img src="https://i.ibb.co/mCjQ6f7X/Screenshot-2025-01-17-14-29-32-182-com-discord-edit.jpg" alt="">
+    </div>
+    <div class="image-block">
+      <div class="image-number">3</div>
+      <img src="https://i.ibb.co/99JtyxPr/image.png" alt="">
+    </div>
+    <div class="image-block">
+      <div class="image-number">4</div>
+      <img src="https://i.ibb.co/2YgWGxC9/Screenshot-20250208-235917-Discord.jpg" alt="">
+    </div>
+    <div class="image-block">
+      <div class="image-number">5</div>
+      <img src="https://i.ibb.co/rGKKqQKn/Screenshot-20250208-212211-Discord.jpg" alt="">
+    </div>
+    <div class="image-block">
+      <div class="image-number">6</div>
+      <img src="https://i.ibb.co/BVb0gznt/Screenshot-20250208-205739-Discord.jpg" alt="">
+    </div>
+    <div class="image-block">
+      <div class="image-number">7</div>
+      <img src="https://i.ibb.co/ycKXByJ5/Screenshot-20250208-161835-Discord.jpg" alt="">
+    </div>
+    <div class="image-block">
+      <div class="image-number">8</div>
+      <img src="https://i.ibb.co/5gPw4ncB/Screenshot-20250208-142837-Discord.jpg" alt="">
+    </div>
+    <div class="image-block">
+      <div class="image-number">9</div>
+      <img src="https://i.ibb.co/YBGPSQDP/IMG-2891-png.jpg" alt="">
+    </div>
+    <div class="image-block">
+      <div class="image-number">10</div>
+      <img src="https://i.ibb.co/7xvhWm6h/Screenshot-20250208-135558-Discord.jpg" alt="">
+    </div>
+    <div class="image-block">
+      <div class="image-number">11</div>
+      <img src="https://i.ibb.co/bR8xzHZX/Screenshot-20250208-133858-Discord.jpg" alt="">
+    </div>
+    <div class="image-block">
+      <div class="image-number">12</div>
+      <img src="https://i.ibb.co/k2BbkmKR/Screenshot-20250208-131317-Discord.jpg" alt="">
+    </div>
+    <div class="image-block">
+      <div class="image-number">13</div>
+      <img src="https://i.ibb.co/21rm9NFD/Screenshot-20250208-130720-Discord.jpg" alt="">
+    </div>
+    <div class="image-block">
+      <div class="image-number">14</div>
+      <img src="https://i.ibb.co/ZzPJMXQP/playrix.png" alt="">
+    </div>
+    <div class="image-block">
+      <div class="image-number">15</div>
+      <img src="https://i.ibb.co/RTn7Xtnz/image-19.jpg" alt="">
+    </div>
+    <div class="image-block">
+      <div class="image-number">16</div>
+      <img src="https://i.ibb.co/gpZSTBk/IMG-2734.jpg" alt="">
+    </div>
+    <div class="image-block">
+      <div class="image-number">17</div>
+      <img src="https://i.ibb.co/0pC96thw/image-1.png" alt="">
+    </div>
+    <div class="image-block">
+      <div class="image-number">18</div>
+      <img src="https://i.ibb.co/4RM48XLx/Screenshot-2025-06-03-15-18-02-28-572064f74bd5f9fa804b05334aa4f912.jpg" alt="">
+    </div>
   </div>
 
   <footer>This is just for fun. Don’t take it seriously 💀</footer>
-
-  <script>
-    // Intersection Observer for scroll animation
-    document.addEventListener('DOMContentLoaded', function() {
-      const blocks = document.querySelectorAll('.image-block');
-      const observerOptions = {
-        root: null,
-        rootMargin: '0px',
-        threshold: 0.15
-      };
-
-      const observer = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-          if (entry.isIntersecting) {
-            entry.target.classList.add('visible');
-            observer.unobserve(entry.target);
-          }
-        });
-      }, observerOptions);
-
-      blocks.forEach(block => {
-        observer.observe(block);
-      });
-    });
-  </script>
 </body>
 </html>
